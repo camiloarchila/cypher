@@ -1,3 +1,5 @@
+--TABLAS
+
 create table usuarios(
 
 documento INT,
@@ -37,3 +39,16 @@ nombre VARCHAR(20),
 descripcion VARCHAR(22)
 
 );
+
+--PK
+ALTER TABLE usuarios ADD CONSTRAINT pk_usuario PRIMARY KEY (documento);
+ALTER TABLE tipo_usuario ADD CONSTRAINT pk_tipousuario PRIMARY KEY (id_tipousuario);
+ALTER TABLE recursos ADD CONSTRAINT pk_recursos PRIMARY KEY (id_recursos);
+ALTER TABLE tipo_recurso ADD CONSTRAINT pk_tipo_recurso PRIMARY KEY (id_tiporecurso);
+
+--FK
+ALTER TABLE usuarios ADD FOREIGN KEY (tipousuario) REFERENCES tipo_usuario(id_tipousuario);
+ALTER TABLE recursos ADD FOREIGN KEY (tiporecurso) REFERENCES tipo_recurso(id_tiporecurso);
+
+--UK
+ALTER TABLE usuarios ADD CONSTRAINT uk_correo UNIQUE KEY (correo);
