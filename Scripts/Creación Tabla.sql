@@ -5,7 +5,7 @@ nombre VARCHAR(20),
 contraseña VARCHAR(16),
 correo VARCHAR(20),
 telefono VARCHAR(20),
-tipousuario VARCHAR(3),
+tipousuario VARCHAR(3)
 
 );
 
@@ -24,8 +24,9 @@ nombre VARCHAR(20),
 ubicacion VARCHAR(20),
 capacidad INT,
 tiporecurso INT,
-disponibilidad BOOLEAN,
-horario DATE,
+fecha DATE,
+horario_inicial TIME,
+horario_final TIME
 
 );
 
@@ -33,6 +34,6 @@ create table tipo_recurso(
 
 id_tiporecurso INT,
 nombre VARCHAR(20),
-descripcion VARCHAR(22),
+descripcion VARCHAR(22)
 
 );
