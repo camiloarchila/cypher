@@ -1,0 +1,15 @@
+edu\eci\cvds\entities\Recurso.class
+edu\eci\cvds\guice\GuiceContextListener.class
+edu\eci\cvds\Security\Bibliologin.class
+edu\eci\cvds\Exceptions\PersistenceException.class
+edu\eci\cvds\persistence\mappers\UserMapper.class
+edu\eci\cvds\persistence\mybatisimpl\MyBatisUserDAO.class
+edu\eci\cvds\managedbeans\loginshiroBean.class
+edu\eci\cvds\Exceptions\BibliotecaException.class
+edu\eci\cvds\services\impl\ECILibraryServicesImpl.class
+edu\eci\cvds\guice\GuiceContextListener$1.class
+edu\eci\cvds\services\ECILibraryServices.class
+edu\eci\cvds\entities\User.class
+edu\eci\cvds\Security\Login.class
+edu\eci\cvds\entities\UserType.class
+edu\eci\cvds\persistence\UserDAO.class

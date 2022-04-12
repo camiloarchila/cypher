@@ -1,10 +1,13 @@
-package edu.eci.cvds.samples.entities;
+package edu.eci.cvds.entities;
 
 
 import java.sql.Time;
 import java.util.Date;
 
-public class Recurso {
+/**
+ * clase que representa un recurso
+ */
+public class Recurso  {
 
     private String nombre;
     private String ubicacion;
@@ -13,7 +16,7 @@ public class Recurso {
     private Time horario_inicial;
     private Time horario_final;
 
-    public Recurso(){}
+    public Recurso(){super();}
 
     public Recurso(String nombre, String ubicacion, int capaciddad, Date fecha, Time horario_inicial, Time horario_final){
     }

@@ -1,16 +1,29 @@
-package edu.eci.cvds.samples.entities;
+package edu.eci.cvds.entities;
 
-public class Usuario {
+
+/**
+ * clase que representa un usuario
+ */
+public class User{
 
     private long documento;
     private String nombre;
     private String contrasena;
     private String correo;
     private String telefono;
+    private UserType userType;
 
-    public Usuario(){}
+    public User(){ super();}
 
-    public Usuario(long documento, String nombre, String contrasena, String correo, String telefono){}
+    public User(long documento, String nombre, String contrasena, String correo, String telefono,UserType userType) {
+        this.documento = documento;
+        this.nombre = nombre;
+        this.contrasena = contrasena;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.userType = userType;
+    }
+
 
     public long getDocumento(){
         return documento;
@@ -50,6 +63,14 @@ public class Usuario {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
     }
 
     @Override

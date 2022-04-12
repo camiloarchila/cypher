@@ -3,7 +3,7 @@ create table usuarios(
 
 documento INT NOT NULL,
 nombre VARCHAR(20) NOT NULL,
-contraseña VARCHAR(16) NOT NULL,
+contrasena VARCHAR(16) NOT NULL,
 correo VARCHAR(20) NOT NULL,
 telefono VARCHAR(20),
 tipousuario VARCHAR(3) NOT NULL
