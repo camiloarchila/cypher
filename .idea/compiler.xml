@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CVDS-Project" />
         <module name="CypherCVJ" />
+        <module name="CVDS.Project" />
       </profile>
     </annotationProcessing>
   </component>

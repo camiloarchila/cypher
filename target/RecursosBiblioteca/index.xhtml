@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title> Recursos ECI </title>
+
+    <style type = "text/css">
+        body{
+            backgruound-color: #632432;
+            font-family: Arial;
+        }
+
+        #main-container{
+            margin: 150px auto;
+            width: 600px;
+        }
+        table{
+            background-color: white;
+            text-align: left;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td{
+            padding: 20px;
+        }
+        thead{
+            background-color: #246355;
+            border-bottom: solid 5px #0F362D;
+            color: white;
+        }
+        tr:nth-child(even){
+           background-color: #ddd;
+        }
+        tr:hover td{
+            background-color: #369681;
+            color: white;
+        }
+    </style>
+</h:head>
+<body>
+<div id="main-container">
+    <table>
+        <thead>
+        <tr>
+            <th>Descripción</th><th>Mes</th><th>Costo</th>
+        </tr>
+        </thead>
+
+        <tr>
+            <td>Agua</td><td>Enero</td><td>$ 3,000</td>
+        </tr>
+        <tr>
+            <td>Luz</td><td>Febrero</td><td>$ 5,500</td>
+        </tr>
+        <tr>
+            <td>Coche</td><td>Marzo</td><td>$ 10,100</td>
+        </tr>
+        <tr>
+            <td>Internet</td><td>Abril</td><td>$ 450</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
