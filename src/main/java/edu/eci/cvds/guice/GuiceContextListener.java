@@ -4,7 +4,9 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+import edu.eci.cvds.persistence.RecursoDAO;
 import edu.eci.cvds.persistence.UserDAO;
+import edu.eci.cvds.persistence.mybatisimpl.MyBatisRecursoDAO;
 import edu.eci.cvds.persistence.mybatisimpl.MyBatisUserDAO;
 import org.mybatis.guice.XMLMyBatisModule;
 import org.mybatis.guice.datasource.helper.JdbcHelper;
@@ -31,7 +33,7 @@ public class GuiceContextListener implements ServletContextListener {
         setEnvironmentId("development");
         setClassPathResource("mybatis-config.xml");
         bind(ECILibraryServices.class).to(ECILibraryServicesImpl.class);
-        bind(UserDAO.class).to(MyBatisUserDAO.class);
+        bind(RecursoDAO.class).to(MyBatisRecursoDAO.class);
        }
     });
 

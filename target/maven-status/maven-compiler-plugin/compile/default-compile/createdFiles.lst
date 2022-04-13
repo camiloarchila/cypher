@@ -8,5 +8,9 @@ edu\eci\cvds\services\impl\ECILibraryServicesImpl.class
 edu\eci\cvds\guice\GuiceContextListener$1.class
 edu\eci\cvds\services\ECILibraryServices.class
 edu\eci\cvds\entities\User.class
-edu\eci\cvds\entities\UserType.class
+edu\eci\cvds\persistence\mappers\RecursoMapper.class
+edu\eci\cvds\persistence\RecursoDAO.class
+edu\eci\cvds\services\ECILibraryServicesFactory.class
+edu\eci\cvds\persistence\mybatisimpl\MyBatisRecursoDAO.class
+edu\eci\cvds\services\ECILibraryServicesFactory$1.class
 edu\eci\cvds\persistence\UserDAO.class

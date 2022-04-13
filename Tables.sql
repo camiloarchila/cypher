@@ -24,30 +24,20 @@ id_recursos INT NOT NULL,
 nombre VARCHAR(20) NOT NULL,
 ubicacion VARCHAR(20) NOT NULL,
 capacidad INT NOT NULL,
-tiporecurso INT NOT NULL,
+tiporecurso VARCHAR(20) NOT NULL,
 fecha DATE NOT NULL,
 horario_inicial TIME NOT NULL,
 horario_final TIME NOT NULL
 
 );
 
-create table tipo_recurso(
-
-id_tiporecurso INT NOT NULL,
-nombre VARCHAR(20) NOT NULL,
-descripcion VARCHAR(22) NOT NULL
-
-);
 
 --PK
 ALTER TABLE usuarios ADD CONSTRAINT pk_usuario PRIMARY KEY (documento);
-ALTER TABLE tipo_usuario ADD CONSTRAINT pk_tipousuario PRIMARY KEY (id_tipousuario);
 ALTER TABLE recursos ADD CONSTRAINT pk_recursos PRIMARY KEY (id_recursos);
-ALTER TABLE tipo_recurso ADD CONSTRAINT pk_tipo_recurso PRIMARY KEY (id_tiporecurso);
 
 --FK
 ALTER TABLE usuarios ADD FOREIGN KEY (tipousuario) REFERENCES tipo_usuario(id_tipousuario);
-ALTER TABLE recursos ADD FOREIGN KEY (tiporecurso) REFERENCES tipo_recurso(id_tiporecurso);
 
 --UK
 ALTER TABLE usuarios ADD CONSTRAINT uk_correo UNIQUE (correo);

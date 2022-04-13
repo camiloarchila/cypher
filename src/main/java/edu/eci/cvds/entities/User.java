@@ -11,11 +11,11 @@ public class User{
     private String contrasena;
     private String correo;
     private String telefono;
-    private UserType userType;
+    private String userType;
 
     public User(){ super();}
 
-    public User(long documento, String nombre, String contrasena, String correo, String telefono,UserType userType) {
+    public User(long documento, String nombre, String contrasena, String correo, String telefono,String userType) {
         this.documento = documento;
         this.nombre = nombre;
         this.contrasena = contrasena;
@@ -65,11 +65,11 @@ public class User{
         this.telefono = telefono;
     }
 
-    public UserType getUserType() {
+    public String getUserType() {
         return userType;
     }
 
-    public void setUserType(UserType userType) {
+    public void setUserType(String userType) {
         this.userType = userType;
     }
 

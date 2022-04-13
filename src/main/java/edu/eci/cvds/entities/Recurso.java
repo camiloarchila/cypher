@@ -9,16 +9,27 @@ import java.util.Date;
  */
 public class Recurso  {
 
+    private int id;
     private String nombre;
     private String ubicacion;
     private int capaciddad;
     private Date fecha;
     private Time horario_inicial;
     private Time horario_final;
+    private String tiporecurso;
 
     public Recurso(){super();}
 
-    public Recurso(String nombre, String ubicacion, int capaciddad, Date fecha, Time horario_inicial, Time horario_final){
+    public Recurso(int id, String nombre, String ubicacion, int capaciddad, Date fecha, Time horario_inicial, Time horario_final,String tiporecurso){
+        this.id = id;
+        this.nombre = nombre;
+        this.ubicacion = ubicacion;
+        this.capaciddad = capaciddad;
+        this.fecha = fecha;
+        this.horario_inicial=horario_inicial;
+        this.horario_final=horario_final;
+        this.tiporecurso=tiporecurso;
+
     }
 
     public String getNombre(){
@@ -67,5 +78,21 @@ public class Recurso  {
 
     public void setHorario_final(Time horario_final) {
         this.horario_final = horario_final;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTiporecurso() {
+        return tiporecurso;
+    }
+
+    public void setTiporecurso(String tiporecurso) {
+        this.tiporecurso = tiporecurso;
     }
 }
