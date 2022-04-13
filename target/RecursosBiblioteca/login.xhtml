@@ -48,31 +48,31 @@
 </h:head>
 <h:body>
     <center>
-    <h:form>
-        <div class = "row" style="display:grid; grid-template-rows:auto; row-gap: 1ch; justyfy-content:center; align-items: center;">
-            <div class="title" style = "display: flex; justyfy-content:center; align-items: center;" >
-                <img src = "./Images/img2.png" width="300" height="90" />
+        <h:form>
+            <div class = "row" style="display:grid; grid-template-rows:auto; row-gap: 1ch; justyfy-content:center; align-items: center;">
+                <div class="title" style = "display: flex; justyfy-content:center; align-items: center;" >
+                    <img src = "./Images/img2.png" width="300" height="90" />
+                </div>
+                <div class="fondo" style = "display: flex; justyfy-content:center; align-items: center;" >
+                    <img src = "./Images/fondo1.jpg" width="300" height="200" />
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center; ">
+                    <p:outputLabel for = "txtUsuario" value = "Usuario"/>
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
+                    <p:inputText id = "txtUsuario" required = "true"/>
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
+                    <p:outputLabel for = "txtClave" value = "Clave" />
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
+                    <p:inputText id = "txtClave" required = "true" />
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
+                    <p:commandButton class = "btn btn-black" value = "Iniciar Sesion"/>
+                </div>
             </div>
-            <div class="fondo" style = "display: flex; justyfy-content:center; align-items: center;" >
-               <img src = "./Images/fondo1.jpg" width="300" height="200" />
-            </div>
-            <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center; ">
-            <p:outputLabel for = "txtUsuario" value = "Usuario"/>
-            </div>
-            <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
-            <p:inputText id = "txtUsuario" required = "true"/>
-            </div>
-            <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
-            <p:outputLabel for = "txtClave" value = "Clave" />
-            </div>
-            <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
-            <p:inputText id = "txtClave" required = "true" />
-            </div>
-            <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
-            <p:commandButton class = "btn btn-black" value = "Iniciar Sesion"/>
-            </div>
-        </div>
-    </h:form>
+        </h:form>
     </center>
 </h:body>
 </html>

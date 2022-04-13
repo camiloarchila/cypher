@@ -4,17 +4,18 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title> Recursos ECI </title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
+    <link rel="" href="https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.dataTables.min.css"/>
+
 
     <style type = "text/css">
         body{
-            background-color: #632432;
+            background-image:url('./Images/img1.jpg');
+            background-size: 100% 100%;
+            background-attachment: fixed;
             font-family: Arial;
-        }
-
-        #main-container{
-            margin: 150px auto;
-            width: 600px;
         }
         table{
             background-color: white;
@@ -37,30 +38,68 @@
             background-color: #369681;
             color: white;
         }
+        .btn{
+            border: solid 1px;
+            padding: 5px 10px;
+        }
+        .btn-black{
+            border-color:black;
+            color:black;
+        }
+        .btn-black:hover{
+            background-color:black;
+            border-color:white;
+            color:withe;
+        }
     </style>
 </h:head>
 <body>
-<div id="main-container">
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th><th>Nombre</th><th>Tipo</th><th>Disponibles</th><th>Reservar</th>
-        </tr>
-        </thead>
+<table id="example" class="display" style="justyfy-content:center; align-items: center; width:70%;">
+    <thead>
+    <tr>
+        <th>ID</th><th>Nombre</th><th>Tipo Recurso</th><th>Ubicacion</th><th>Cantidad</th><th>Reservar</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Tiger Nixon</td><td>System Architect</td><td>Edinburgh</td><td>61</td><td></td>
+        <td><p:commandButton class = "btn btn-black" value = "Consultar"/></td>
+    </tr>
+    </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
 
-        <tr>
-            <td>Agua</td><td>Enero</td><td>$ 3,000</td>
-        </tr>
-        <tr>
-            <td>Luz</td><td>Febrero</td><td>$ 5,500</td>
-        </tr>
-        <tr>
-            <td>Coche</td><td>Marzo</td><td>$ 10,100</td>
-        </tr>
-        <tr>
-            <td>Internet</td><td>Abril</td><td>$ 450</td>
-        </tr>
-    </table>
-</div>
+<script>
+    let temp = $("#btn1").clone();
+    $("#btn1").click(function(){
+        $("#btn1").after(temp);
+    });
+
+    $(document).ready(function(){
+        var table = $('#example').DataTable({
+           orderCellsTop: true,
+           fixedHeader: true
+        });
+
+        //Creamos una fila en el head de la tabla y lo clonamos para cada columna
+        $('#example thead tr').clone(true).appendTo( '#example thead' );
+
+        $('#example thead tr:eq(1) th').each( function (i) {
+            var title = $(this).text(); //es el nombre de la columna
+            $(this).html( '<input type="text" placeholder="Search...'+title+'" />' );
+
+            $( 'input', this ).on( 'keyup change', function () {
+                if ( table.column(i).search() !== this.value ) {
+                    table
+                        .column(i)
+                        .search( this.value )
+                        .draw();
+                }
+            } );
+        } );
+    });
+</script>
 </body>
 </html>
