@@ -1,5 +1,6 @@
 edu\eci\cvds\entities\Recurso.class
 edu\eci\cvds\guice\GuiceContextListener.class
+edu\eci\cvds\view\BasePageBean.class
 edu\eci\cvds\Exceptions\PersistenceException.class
 edu\eci\cvds\persistence\mappers\UserMapper.class
 edu\eci\cvds\persistence\mybatisimpl\MyBatisUserDAO.class
@@ -14,3 +15,4 @@ edu\eci\cvds\services\ECILibraryServicesFactory.class
 edu\eci\cvds\persistence\mybatisimpl\MyBatisRecursoDAO.class
 edu\eci\cvds\services\ECILibraryServicesFactory$1.class
 edu\eci\cvds\persistence\UserDAO.class
+edu\eci\cvds\view\RecursoBean.class

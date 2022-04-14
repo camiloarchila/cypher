@@ -29,7 +29,7 @@ public class GuiceContextListener implements ServletContextListener {
         @Override
         protected void initialize() {
 
-        install(JdbcHelper.MySQL);
+        install(JdbcHelper.PostgreSQL);
         setEnvironmentId("development");
         setClassPathResource("mybatis-config.xml");
         bind(ECILibraryServices.class).to(ECILibraryServicesImpl.class);

@@ -12,6 +12,7 @@ public class MyBatisRecursoDAO implements RecursoDAO {
 
     @Inject
     private RecursoMapper recursoMapper;
+
     @Override
     public List<Recurso> consultarRecursos() throws PersistenceException {
         List<Recurso> lisrecursos = null;

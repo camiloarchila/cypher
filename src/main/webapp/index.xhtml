@@ -54,19 +54,44 @@
     </style>
 </h:head>
 <body>
-<table id="example" class="display" style="justyfy-content:center; align-items: center; width:70%;">
-    <thead>
-    <tr>
-        <th>ID</th><th>Nombre</th><th>Tipo Recurso</th><th>Ubicacion</th><th>Cantidad</th><th>Reservar</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Tiger Nixon</td><td>System Architect</td><td>Edinburgh</td><td>61</td><td></td>
-        <td><p:commandButton class = "btn btn-black" value = "Consultar"/></td>
-    </tr>
-    </tbody>
-</table>
+
+<h:head>
+    <title> Recursos Biblioteca </title>
+</h:head>
+<h:body>
+    <h:form id="Recursos">
+        <div class = "table">
+            <p:dataTable  id ="cualquiercosa" var="recursos" value="#{RecursoBean.consultarRecursos()}" style="text-align: left; align: center">
+                <p:column headerText="Id">
+                    <h:outputText value="#{recursos.id_recursos}" />
+                </p:column>
+                <p:column headerText="Nombre">
+                    <h:outputText value="#{recursos.nombre}" />
+                </p:column>
+                <p:column headerText="Ubicacion">
+                    <h:outputText value="#{recursos.ubicacion}" />
+                </p:column>
+                <p:column headerText="Capacidad">
+                    <h:outputText value="#{recursos.capacidad}" />
+                </p:column>
+                <p:column headerText="Tipo">
+                    <h:outputText value="#{recursos.tiporecurso}" />
+                </p:column>
+                <p:column headerText="Fecha">
+                    <h:outputText value="#{recursos.fecha}" />
+                </p:column>
+                <p:column headerText="Fecha Inicio">
+                    <h:outputText value="#{recursos.horario_inicial}" />
+                </p:column>
+                <p:column headerText="Fecha Fin">
+                    <h:outputText value="#{recursos.horario_final}" />
+                </p:column>
+
+            </p:dataTable>
+        </div>
+    </h:form>
+</h:body>
+
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>

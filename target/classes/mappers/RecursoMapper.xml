@@ -12,9 +12,9 @@
         <result property='horario_final' column='horario_final'/>
         <result property='tiporecurso' column='tiporecurso'/>
     </resultMap>
-    <select id="consultarRecursos" resultMap="RecursosResult">
+    <select id="consultarRecursos" resultMap="RecursoResult">
             select
-            r.id,
+            r.id_recursos,
             r.nombre,
             r.ubicacion,
             r.capacidad,

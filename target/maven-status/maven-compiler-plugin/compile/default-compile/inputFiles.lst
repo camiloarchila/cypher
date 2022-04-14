@@ -1,3 +1,4 @@
+C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\edu\eci\cvds\view\BasePageBean.java
 C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\edu\eci\cvds\persistence\mybatisimpl\MyBatisRecursoDAO.java
 C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\edu\eci\cvds\entities\User.java
 C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\edu\eci\cvds\services\main.java
@@ -12,4 +13,5 @@ C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\ed
 C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\edu\eci\cvds\persistence\UserDAO.java
 C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\edu\eci\cvds\services\ECILibraryServices.java
 C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\edu\eci\cvds\guice\GuiceContextListener.java
+C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\edu\eci\cvds\view\RecursoBean.java
 C:\Users\esteb\Documents\Universidad\CVDS\Proyecto\CVDS-Project\src\main\java\edu\eci\cvds\Exceptions\PersistenceException.java

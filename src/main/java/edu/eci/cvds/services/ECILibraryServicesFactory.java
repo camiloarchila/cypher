@@ -42,16 +42,6 @@ public class ECILibraryServicesFactory {
         return optInjector.get().getInstance(ECILibraryServices.class);
     }
 
-/**
-    public ECILibraryServices getServiciosAlquilerTesting(){
-        if (!optInjector.isPresent()) {
-            optInjector = Optional.of(myBatisInjector("test","mybatis-config-h2.xml"));
-        }
-
-        return optInjector.get().getInstance(ServiciosAlquiler.class);
-    }
- **/
-
 
     public static ECILibraryServicesFactory getInstance(){
         return instance;

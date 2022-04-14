@@ -12,24 +12,29 @@ public class Recurso  {
     private int id;
     private String nombre;
     private String ubicacion;
-    private int capaciddad;
+    private int capacidad;
     private Date fecha;
-    private Time horario_inicial;
-    private Time horario_final;
+    private int horario_inicial;
+    private int horario_final;
     private String tiporecurso;
 
     public Recurso(){super();}
 
-    public Recurso(int id, String nombre, String ubicacion, int capaciddad, Date fecha, Time horario_inicial, Time horario_final,String tiporecurso){
+    public Recurso(int id, String nombre, String ubicacion, int capacidad, Date fecha, int horario_inicial, int horario_final,String tiporecurso){
         this.id = id;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
-        this.capaciddad = capaciddad;
+        this.capacidad = capacidad;
         this.fecha = fecha;
         this.horario_inicial=horario_inicial;
         this.horario_final=horario_final;
         this.tiporecurso=tiporecurso;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Horario{" + " id= " + id + " nombre= " + nombre + " ubicacion= " + ubicacion + " capacidad= "+ capacidad +  " fecha = " + fecha + " Hora_inicial= " + horario_inicial + " Hora_final= " + horario_final + " tipo= " + tiporecurso + "}";
     }
 
     public String getNombre(){
@@ -41,18 +46,18 @@ public class Recurso  {
     }
 
     public int getCapaciddad(){
-        return capaciddad;
+        return capacidad;
     }
 
     public Date getFecha(){
         return fecha;
     }
 
-    public Time getHorario_inicial(){
+    public int getHorario_inicial(){
         return horario_inicial;
     }
 
-    public Time getHorario_final(){
+    public int getHorario_final(){
         return horario_final;
     }
 
@@ -65,18 +70,18 @@ public class Recurso  {
     }
 
     public void setCapaciddad(int capaciddad) {
-        this.capaciddad = capaciddad;
+        this.capacidad = capacidad;
     }
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
-    public void setHorario_inicial(Time horario_inicial) {
+    public void setHorario_inicial(int horario_inicial) {
         this.horario_inicial = horario_inicial;
     }
 
-    public void setHorario_final(Time horario_final) {
+    public void setHorario_final(int horario_final) {
         this.horario_final = horario_final;
     }
 
