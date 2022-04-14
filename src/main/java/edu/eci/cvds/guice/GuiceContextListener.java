@@ -35,7 +35,8 @@ public class GuiceContextListener implements ServletContextListener {
         bind(ECILibraryServices.class).to(ECILibraryServicesImpl.class);
         bind(RecursoDAO.class).to(MyBatisRecursoDAO.class);
        }
-    });
+    }
+    );
 
         ServletContext servletContext = servletContextEvent.getServletContext();
         servletContext.setAttribute(Injector.class.getName(), injector);

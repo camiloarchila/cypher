@@ -1,0 +1,106 @@
+body{
+    background-image:url('../Images/fondoindex.jpg');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: 25px 50px;
+    background-size: 100% 100%;
+}
+.inicio{
+    display: flex;
+    justify-content: center;
+    background-color:rgba(255, 199, 199, 0.2);
+    width: 450px;
+    height: 300px;
+    transform:translate(105%, 16ch);
+}
+.inicio img{
+    width: 150px;
+    height: 150px;
+    margin: 30px 530px;
+}
+
+.acciones a{
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  font-weight: 20;
+  font-size: 12px;
+  border-radius: 2px;
+  transition: .25s;
+  text-decoration: rgb(68, 68, 68);
+}
+.botonlogin{
+    display: block;
+    width:150px;
+    height:25px;
+    outline:none;
+    border: 1px solid white;
+    border-radius: 15px;
+    color:white;
+    cursor: pointer;
+    margin: 40px 530px;
+    transition: all .25s;
+    z-index: 1;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.botonlogin: before{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:0;
+    left: 0;
+    bottom:0;
+    border-radius: 10px;
+    transition: all .25s;
+    z-index: -1;
+}
+.botonlogin:hover{
+    border: 6px solid transparent;
+    background-image:linear-gradient(to right,rgb(252,106,106), rgb(255,31,31) );
+    color: black;
+}
+
+.botonlogin:hover::before{
+    height: 100%;
+
+}
+
+.consultar{
+    display: block;
+    width:150px;
+    height:25px;
+    outline:none;
+    border: 1px solid white;
+    border-radius: 15px;
+    color:white;
+    cursor: pointer;
+    margin: -66px 730px;
+    transition: all .25s;
+    z-index: 1;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.consultar: before{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:0;
+    left: 0;
+    bottom:0;
+    border-radius: 6px;
+    transition: all .25s;
+    z-index: -1;
+}
+.consultar:hover{
+    border: 6px solid transparent;
+    background-image:linear-gradient(to right,rgb(252,106,106), rgb(255,31,31) );
+    color: black;
+}
+
+.consultar:hover::before{
+    height: 100%;
+
+}
+
