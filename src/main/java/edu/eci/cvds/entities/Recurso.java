@@ -1,13 +1,14 @@
 package edu.eci.cvds.entities;
 
 
+import java.io.Serializable;
 import java.sql.Time;
 import java.util.Date;
 
 /**
  * clase que representa un recurso
  */
-public class Recurso  {
+public class Recurso implements Serializable {
 
     private int id;
     private String nombre;
@@ -18,7 +19,7 @@ public class Recurso  {
     private int horario_final;
     private String tiporecurso;
 
-    public Recurso(){super();}
+    public Recurso(){}
 
     public Recurso(int id, String nombre, String ubicacion, int capacidad, Date fecha, int horario_inicial, int horario_final,String tiporecurso){
         this.id = id;
@@ -34,7 +35,7 @@ public class Recurso  {
 
     @Override
     public String toString() {
-        return "Horario{" + " id= " + id + " nombre= " + nombre + " ubicacion= " + ubicacion + " capacidad= "+ capacidad +  " fecha = " + fecha + " Hora_inicial= " + horario_inicial + " Hora_final= " + horario_final + " tipo= " + tiporecurso + "}";
+        return "Recurso{" + " id= " + id + " nombre= " + nombre + " ubicacion= " + ubicacion + " capacidad= "+ capacidad +  " fecha = " + fecha + " Hora_inicial= " + horario_inicial + " Hora_final= " + horario_final + " tipo= " + tiporecurso + "}";
     }
 
     public String getNombre(){
@@ -45,8 +46,12 @@ public class Recurso  {
         return ubicacion;
     }
 
-    public int getCapaciddad(){
+    public int getCapacidad() {
         return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
 
     public Date getFecha(){
@@ -67,10 +72,6 @@ public class Recurso  {
 
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
-    }
-
-    public void setCapaciddad(int capaciddad) {
-        this.capacidad = capacidad;
     }
 
     public void setFecha(Date fecha) {

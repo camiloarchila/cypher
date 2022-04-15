@@ -14,5 +14,6 @@ edu\eci\cvds\persistence\RecursoDAO.class
 edu\eci\cvds\services\ECILibraryServicesFactory.class
 edu\eci\cvds\persistence\mybatisimpl\MyBatisRecursoDAO.class
 edu\eci\cvds\services\ECILibraryServicesFactory$1.class
+edu\eci\cvds\services\main.class
 edu\eci\cvds\persistence\UserDAO.class
 edu\eci\cvds\view\RecursoBean.class

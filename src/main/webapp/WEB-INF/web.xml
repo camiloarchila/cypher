@@ -13,7 +13,10 @@
         <url-pattern>/CVDS.Project/*</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>CVDS.Project/./index.html</welcome-file>
+        <welcome-file>CVDS.Project/index.html</welcome-file>
     </welcome-file-list>
+    <listener>
+        <listener-class>edu.eci.cvds.guice.GuiceContextListener</listener-class>
+    </listener>
 
 </web-app>

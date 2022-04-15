@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="config.properties">
+    </properties>
+
+    <typeAliases>
+        <typeAlias type='edu.eci.cvds.entities.Recurso' alias='Recurso' />
+        <typeAlias type='edu.eci.cvds.entities.User' alias='User' />
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver" />
+                <property name="url" value="jdbc:postgresql://ec2-34-194-158-176.compute-1.amazonaws.com:5432/d975rn81uu1t9t?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory&amp;sslmode=require" />
+                <property name="username" value="xitgjpnsnwlaxj" />
+                <property name="password" value="445cc85e41ba8e9ffb37482671bc03f4e704d0c29ff5daf3aff8b7bb61e83d36" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mappers/RecursoMapper.xml"></mapper>
+    </mappers>
+
+</configuration>

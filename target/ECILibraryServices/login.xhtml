@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title> login </title>
+
+    <style type = "text/css">
+        body {
+            background-image:url('./Images/img5.jpg');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        .row{
+            margin: 9% 0 0 -2%;
+        }
+        .title {
+            position: relative;
+            left: 50%;
+            transform:translate(-7%, 10ch);
+        }
+        .panel{
+            position: relative;
+            left: 50%;
+            transform:translate(-5%, -15ch);
+        }
+        .fondo{
+            position: relative;
+            left: 50%;
+            transform:translate(-7%, 10ch);
+        }
+        .btn{
+            border: solid 1px;
+            padding: 5px 10px;
+        }
+        .btn-black{
+            border-color:black;
+            color:black;
+        }
+        .btn-black:hover{
+            background-color:black;
+            border-color:white;
+            color:withe;
+        }
+
+    </style>
+</h:head>
+<h:body>
+    <center>
+        <h:form>
+            <div class = "row" style="display:grid; grid-template-rows:auto; row-gap: 1ch; justyfy-content:center; align-items: center;">
+                <div class="title" style = "display: flex; justyfy-content:center; align-items: center;" >
+                    <img src = "./Images/img2.png" width="300" height="90" />
+                </div>
+                <div class="fondo" style = "display: flex; justyfy-content:center; align-items: center;" >
+                    <img src = "./Images/fondo1.jpg" width="300" height="200" />
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center; ">
+                    <p:outputLabel for = "txtUsuario" value = "Usuario"/>
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
+                    <p:inputText id = "txtUsuario" required = "true"/>
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
+                    <p:outputLabel for = "txtClave" value = "Clave" />
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
+                    <p:inputText id = "txtClave" required = "true" />
+                </div>
+                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
+                    <p:commandButton class = "btn btn-black" value = "Iniciar Sesion"/>
+                </div>
+            </div>
+        </h:form>
+    </center>
+</h:body>
+</html>

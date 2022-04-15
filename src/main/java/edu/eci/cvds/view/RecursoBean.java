@@ -13,7 +13,7 @@ import javax.faces.bean.SessionScoped;
 import java.util.ArrayList;
 import java.util.List;
 
-@ManagedBean(name = "RecursoBean", eager = true)
+@ManagedBean(name = "RecursoBean")
 @RequestScoped
 public class RecursoBean extends BasePageBean{
 
