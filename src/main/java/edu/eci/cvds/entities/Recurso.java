@@ -15,13 +15,13 @@ public class Recurso implements Serializable {
     private String ubicacion;
     private int capacidad;
     private Date fecha;
-    private int horario_inicial;
-    private int horario_final;
+    private Time horario_inicial;
+    private Time horario_final;
     private String tiporecurso;
 
     public Recurso(){}
 
-    public Recurso(int id, String nombre, String ubicacion, int capacidad, Date fecha, int horario_inicial, int horario_final,String tiporecurso){
+    public Recurso(int id, String nombre, String ubicacion, int capacidad, Date fecha, Time horario_inicial, Time horario_final,String tiporecurso){
         this.id = id;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
@@ -58,11 +58,11 @@ public class Recurso implements Serializable {
         return fecha;
     }
 
-    public int getHorario_inicial(){
+    public Time getHorario_inicial(){
         return horario_inicial;
     }
 
-    public int getHorario_final(){
+    public Time getHorario_final(){
         return horario_final;
     }
 
@@ -78,11 +78,11 @@ public class Recurso implements Serializable {
         this.fecha = fecha;
     }
 
-    public void setHorario_inicial(int horario_inicial) {
+    public void setHorario_inicial(Time horario_inicial) {
         this.horario_inicial = horario_inicial;
     }
 
-    public void setHorario_final(int horario_final) {
+    public void setHorario_final(Time horario_final) {
         this.horario_final = horario_final;
     }
 

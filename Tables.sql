@@ -18,8 +18,8 @@ ubicacion VARCHAR(20) NOT NULL,
 capacidad INT NOT NULL,
 tiporecurso VARCHAR(20) NOT NULL,
 fecha DATE NOT NULL,
-horario_inicial INT NOT NULL,
-horario_final INT NOT NULL
+horario_inicial TIME NOT NULL,
+horario_final TIME NOT NULL
 
 );
 
@@ -43,14 +43,21 @@ add foreign key (tipousuario) references tipousuario (id);
 
 --Poblar
 insert into recursos (id_recursos,nombre,ubicacion,capacidad,tiporecurso,fecha,horario_inicial,horario_final)
-values (1,'libro','biblioteca1',4,'sala','2020-11-11',5,6);
+values (1,'libro','biblioteca1',1,'libro','2020-11-11','05:00:00','06:00:00');
 
 insert into recursos (id_recursos,nombre,ubicacion,capacidad,tiporecurso,fecha,horario_inicial,horario_final)
-values (2,'libro2','campus',2,'sala','2020-11-11',7,8);
+values (3,'Computador','biblioteca2',1,'computador','2020-11-11','10:00:00','12:00:00');
+
+insert into recursos (id_recursos,nombre,ubicacion,capacidad,tiporecurso,fecha,horario_inicial,horario_final)
+values (2,'libro2','biblioteca2',1,'libro','2020-11-11','07:00:00','10:00:00');
+
+insert into recursos (id_recursos,nombre,ubicacion,capacidad,tiporecurso,fecha,horario_inicial,horario_final)
+values (4,'sala','bibliotecaa1',8,'sala','2020-11-11','13:00:00','15:00:00');
 
 --drop 
 drop table usuarios;
 drop table recursos;
+drop table tipousuario;
 
 --Delete 
 Delete from recursos;

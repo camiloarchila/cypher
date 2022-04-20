@@ -1,40 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui" xmlns:jsf="http://xmlns.jcp.org/jsf">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" >
 <h:head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title> Recursos ECI </title>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/>
-    <link rel="" href="https://cdn.datatables.net/fixedheader/3.1.6/css/fixedHeader.dataTables.min.css"/>
     <style type = "text/css">
         body{
             background-image:url('./Images/img1.jpg');
             background-size: 100% 100%;
             background-attachment: fixed;
             font-family: Arial;
-        }
-        table{
-            background-color: white;
-            text-align: left;
-            border-collapse: collapse;
-            width: 4%;
-        }
-        th, td{
-            padding: 5px;
-        }
-        thead{
-            background-color: rgb(224, 84, 76);
-            border-bottom: solid 2px #e8829a;
-            color: white;
-        }
-        tr:nth-child(even){
-           background-color: #ddd;
-        }
-        tr:hover td{
-            background-color: rgb(235, 228, 228);
-            color: black;
         }
         .btn{
             border: solid 1px;
@@ -51,72 +27,35 @@
         }
     </style>
 </h:head>
-<body>
-<table id="example" class="display" style="justyfy-content:center; align-items: center; width:70%;">
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Ubicacion</th>
-        <th>Capacidad</th>
-        <th>Tipo Recurso</th>
-        <th>fecha</th>
-        <th>horas</th>
-        <th>Reservar</th>
-    </tr>
-    </thead>
-    <tbody>
-    <ui:repeat var="recursos" value="#{RecursoBean.consultarRecursos()}">
-    <tr>
-        <td> #{recursos.id} </td>
-        <td> #{recursos.nombre} </td>
-        <td> #{recursos.ubicacion} </td>
-        <td> #{recursos.capacidad}</td>
-        <td> #{recursos.tiporecurso}</td>
-        <td> #{recursos.fecha}</td>
-        <td> #{recursos.horario_inicial} -
-            <br/>
-            #{recursos.horario_final}
-        </td>
-        <td><p:commandButton class = "btn btn-black" value = "Consultar"/></td>
-    </tr>
-    </ui:repeat>
-    </tbody>
-</table>
+<h:body>
+    <center><h1>Recursos Biblioteca</h1></center>
+    <h:form>
+        <p:dataTable id = "resourses" var="recursos" value="#{RecursoBean.consultarRecursos()}" >
 
-<h:head>
-    <title> Recursos Biblioteca </title>
-</h:head>
+            <p:column headerText="Id" sortBy ="#{recursos.id}" filterBy="#{recursos.id}" filterMatchMode = "contains" >
+                <h:outputText value="#{recursos.id}" />
+            </p:column>
 
+            <p:column headerText="Tiporecurso" sortBy ="#{recursos.tiporecurso}" filterBy="#{recursos.tiporecurso}" filterMatchMode = "contains">
+                <h:outputText value="#{recursos.tiporecurso}" />
+            </p:column>
 
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/fixedheader/3.1.6/js/dataTables.fixedHeader.min.js"></script>
-<script>
-    let temp = $("#btn1").clone();
-    $("#btn1").click(function(){
-        $("#btn1").after(temp);
-    });
-    $(document).ready(function(){
-        var table = $('#example').DataTable({
-           orderCellsTop: true,
-           fixedHeader: true
-        });
-        //Creamos una fila en el head de la tabla y lo clonamos para cada columna
-        $('#example thead tr').clone(true).appendTo( '#example thead' );
-        $('#example thead tr:eq(1) th').each( function (i) {
-            var title = $(this).text(); //es el nombre de la columna
-            $(this).html( '<input type="text" placeholder="Search...'+title+'" />' );
-            $( 'input', this ).on( 'keyup change', function () {
-                if ( table.column(i).search() !== this.value ) {
-                    table
-                        .column(i)
-                        .search( this.value )
-                        .draw();
-                }
-            } );
-        } );
-    });
-</script>
-</body>
+            <p:column headerText="Nombre" sortBy ="#{recursos.nombre}" filterBy="#{recursos.nombre}" filterMatchMode = "contains">
+                <h:outputText value="#{recursos.nombre}" />
+            </p:column>
+
+            <p:column headerText="Ubicacion" sortBy ="#{recursos.ubicacion}" filterBy="#{recursos.ubicacion}" filterMatchMode = "contains">
+                <h:outputText value="#{recursos.ubicacion}" />
+            </p:column>
+
+            <p:column headerText="Capacidad" sortBy ="#{recursos.capacidad}" filterBy="#{recursos.capacidad}" filterMatchMode = "contains">
+                <h:outputText value="#{recursos.capacidad}" />
+            </p:column>
+
+            <p:column headerText="Horarios">
+                <p:commandButton value="Seleccionar"  action="horarios?faces-redirect = true" />
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
 </html>

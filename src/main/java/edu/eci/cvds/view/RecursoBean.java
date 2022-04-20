@@ -5,11 +5,8 @@ import edu.eci.cvds.Exceptions.BibliotecaException;
 import edu.eci.cvds.entities.Recurso;
 import edu.eci.cvds.services.ECILibraryServices;
 
-
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +16,7 @@ public class RecursoBean extends BasePageBean{
 
     @Inject
     private ECILibraryServices eciLibraryServices;
+
 
     /**
      * consultar los recursos de la biblioteca
@@ -34,5 +32,6 @@ public class RecursoBean extends BasePageBean{
         }
         return recursos;
     }
+
 
 }
