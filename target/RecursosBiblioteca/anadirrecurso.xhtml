@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui" >
+<h:head>
+    <title> Recursos ECI </title>
+    <style type = "text/css">
+        body{
+            background-image:url('./Images/img6.jpg');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            font-family: Arial;
+        }
+        .btn{
+            border: solid 1px;
+            padding: 5px 10px;
+        }
+        .btn-black{
+            border-color:black;
+            color:black;
+        }
+        .btn-black:hover{
+            background-image:linear-gradient(to right,rgb(252, 204, 199), rgb(247, 129, 116) );
+            border-color:black;
+            color:black;
+        }
+    </style>
+</h:head>
+<h:body>
+    <center><h1>Registrar Recursos</h1></center>
+<center><div>
+    <div>
+        <h5> Id </h5>
+        <p:inputText id="id" />
+    </div>
+    <div>
+        <h5> Nombre </h5>
+        <p:inputText id="nombre" />
+    </div>
+    <div>
+        <h5> Ubicacion </h5>
+        <p:inputText id="Ubicacion" />
+    </div>
+    <div>
+        <h5> Capacidad </h5>
+        <p:inputText id="Capacidad" />
+    </div>
+    <div>
+        <h5> Tipo Recurso </h5>
+        <p:inputText id="tiporecurso" />
+    </div>
+    <div>
+        <h5> Fecha </h5>
+        <p:inputText id="fecha" />
+    </div>
+
+    <div>
+        <h5> horario_inicial </h5>
+        <p:inputText id="horarioini" />
+    </div>
+
+    <div>
+        <h5> horario_final </h5>
+        <p:inputText id="horariofin" />
+    </div>
+
+</div></center>
+</h:body>
+</html>

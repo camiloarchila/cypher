@@ -54,6 +54,12 @@ values (2,'libro2','biblioteca2',1,'libro','2020-11-11','07:00:00','10:00:00');
 insert into recursos (id_recursos,nombre,ubicacion,capacidad,tiporecurso,fecha,horario_inicial,horario_final)
 values (4,'sala','bibliotecaa1',8,'sala','2020-11-11','13:00:00','15:00:00');
 
+insert into tipousuario values (1, 'admin');
+insert into  tipousuario values(2, 'user');
+
+insert into usuarios values (2167, 'camilo', '12345', 'estbean.archila','317516', 2);
+insert into usuarios values (1, 'admin', 'admin', 'admin','0000', 1);
+
 --drop 
 drop table usuarios;
 drop table recursos;
