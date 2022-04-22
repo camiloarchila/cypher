@@ -10,6 +10,7 @@
         <result property='fecha' column='fecha'/>
         <result property='horario_inicial' column='horario_inicial'/>
         <result property='horario_final' column='horario_final'/>
+        <result property='disponibilidad' column='disponibilidad'/>
         <result property='tiporecurso' column='tiporecurso'/>
     </resultMap>
     <select id="consultarRecursos" resultMap="RecursoResult">
@@ -21,8 +22,15 @@
             r.fecha,
             r.horario_inicial,
             r.horario_final,
+            r.disponibilidad,
             r.tiporecurso
             FROM
             recursos as r
     </select>
+    <insert id="agregarRecursos" parameterType="edu.eci.cvds.entities.Recurso">
+        INSERT INTO Recursos(
+        id_recursos,nombre,ubicacion,capacidad,fecha,horario_inicial,horario_final,disponibilidad,tiporecurso
+        ) VALUES(
+        #{Recurso.id}, #{Recurso.nombre},#{Recurso.ubicacion},#{Recurso.capacidad},#{Recurso.fecha},#{Recurso.horario_inicial},#{Recurso.horario_final},#{Recurso.disponibilidad},#{Recurso.tiporecurso});
+    </insert>
 </mapper>

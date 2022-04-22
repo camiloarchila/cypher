@@ -28,43 +28,51 @@
     </style>
 </h:head>
 <h:body>
-    <center><h1>Registrar Recursos</h1></center>
-<center><div>
-    <div>
-        <h5> Id </h5>
-        <p:inputText id="id" />
-    </div>
-    <div>
-        <h5> Nombre </h5>
-        <p:inputText id="nombre" />
-    </div>
-    <div>
-        <h5> Ubicacion </h5>
-        <p:inputText id="Ubicacion" />
-    </div>
-    <div>
-        <h5> Capacidad </h5>
-        <p:inputText id="Capacidad" />
-    </div>
-    <div>
-        <h5> Tipo Recurso </h5>
-        <p:inputText id="tiporecurso" />
-    </div>
-    <div>
-        <h5> Fecha </h5>
-        <p:inputText id="fecha" />
-    </div>
-
-    <div>
-        <h5> horario_inicial </h5>
-        <p:inputText id="horarioini" />
-    </div>
-
-    <div>
-        <h5> horario_final </h5>
-        <p:inputText id="horariofin" />
-    </div>
-
-</div></center>
+    <h:form id = "recurso_form">
+        <p>Nombre</p>
+        <p:inputText class="form-control" id="Nombre" type="String" binding="#{nombre}" />
+        <br></br><br/>
+        <div>
+            <label>Ubicación</label>
+            <h:selectOneMenu value="#{RecursoBean.ubicacion}" class="form-control" >
+                <f:selectItems value="#{RecursoBean.getUbicaciones()}" />
+            </h:selectOneMenu>
+        </div>
+        <p>Capacidad</p>
+        <p:inputText class="form-control" id="capacidad" type="number" binding="#{capacidad}" /> <br/>
+        <p>Fecha</p>
+        <p:inputText class="form-control" id="fecha" type="String" binding="#{fecha}" /> <br/>
+        <br></br>
+        <div>
+            <p>Hora inicial</p>
+            <p:inputText class="form-control" id="horaInicio" type="String" binding="#{horario_inicial}"
+                         value="00:00:00" placeholder="00:00:00" />
+        </div>
+        <br></br>
+        <div>
+            <p>Hora Final</p>
+            <p:inputText class="form-control" id="horaFinal" type="String" binding="#{horario_final}"
+                         value="00:00:00" placeholder="00:00:00" />
+        </div>
+        <br></br>
+        <div>
+            <label>Disponibilidad</label>
+            <h:selectOneMenu value="#{RecursoBean.dispoRecursosre}" class="form-control" >
+                <f:selectItems value="#{RecursoBean.getDispoRecursos()}" />
+            </h:selectOneMenu>
+        </div>
+        <br></br>
+        <div>
+            <label>Tipo de recurso</label>
+            <h:selectOneMenu value="#{RecursoBean.typeRecursore}" class="form-control" >
+                <f:selectItems value="#{RecursoBean.getTypeRecurso()}" />
+            </h:selectOneMenu>
+        </div>
+        <p:commandButton value="Registrar" onclick="">
+            <f:actionListener
+                    binding="#{RecursoBean.registrarRecurso(nombre.value, capacidad.value,fecha.value,horario_inicial.value, horario_final.value)}"
+                    update ="recurso_form" />
+        </p:commandButton>
+    </h:form>
 </h:body>
 </html>

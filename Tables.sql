@@ -16,10 +16,11 @@ id_recursos INT NOT NULL,
 nombre VARCHAR(20) NOT NULL,
 ubicacion VARCHAR(20) NOT NULL,
 capacidad INT NOT NULL,
-tiporecurso VARCHAR(20) NOT NULL,
 fecha DATE NOT NULL,
 horario_inicial TIME NOT NULL,
-horario_final TIME NOT NULL
+horario_final TIME NOT NULL,
+disponibilidad VARCHAR(20) NOT NULL,
+tiporecurso VARCHAR(20) NOT NULL
 
 );
 
@@ -38,21 +39,21 @@ ALTER TABLE TipoUsuario  ADD CONSTRAINT pk_tipousuario PRIMARY KEY (id);
 ALTER TABLE usuarios ADD CONSTRAINT uk_correo UNIQUE (correo);
 
 --FK
-alter TABLE usuarios  
+alter TABLE usuarios
 add foreign key (tipousuario) references tipousuario (id);
 
 --Poblar
-insert into recursos (id_recursos,nombre,ubicacion,capacidad,tiporecurso,fecha,horario_inicial,horario_final)
-values (1,'libro','biblioteca1',1,'libro','2020-11-11','05:00:00','06:00:00');
+insert into recursos (id_recursos,nombre,ubicacion,capacidad,fecha,horario_inicial,horario_final,disponibilidad,tiporecurso)
+values (1,'libro','biblioteca1',1,'2020-11-11','05:00:00','06:00:00','disponible','sala de estudio');
 
-insert into recursos (id_recursos,nombre,ubicacion,capacidad,tiporecurso,fecha,horario_inicial,horario_final)
-values (3,'Computador','biblioteca2',1,'computador','2020-11-11','10:00:00','12:00:00');
+insert into recursos (id_recursos,nombre,ubicacion,capacidad,fecha,horario_inicial,horario_final,disponibilidad,tiporecurso)
+values (2,'computador','biblioteca1',2,'2020-11-11','05:00:00','06:00:00','disponible','sala de computo');
 
-insert into recursos (id_recursos,nombre,ubicacion,capacidad,tiporecurso,fecha,horario_inicial,horario_final)
-values (2,'libro2','biblioteca2',1,'libro','2020-11-11','07:00:00','10:00:00');
+insert into recursos (id_recursos,nombre,ubicacion,capacidad,fecha,horario_inicial,horario_final,disponibilidad,tiporecurso)
+values (3,'libro','biblioteca2',4,'2020-11-11','05:00:00','06:00:00','disponible','sala de estudio');
 
-insert into recursos (id_recursos,nombre,ubicacion,capacidad,tiporecurso,fecha,horario_inicial,horario_final)
-values (4,'sala','bibliotecaa1',8,'sala','2020-11-11','13:00:00','15:00:00');
+insert into recursos (id_recursos,nombre,ubicacion,capacidad,fecha,horario_inicial,horario_final,disponibilidad,tiporecurso)
+values (4,'computador','biblioteca2',1,'2020-11-11','05:00:00','06:00:00','disponible','sala de computo');
 
 insert into tipousuario values (1, 'admin');
 insert into  tipousuario values(2, 'user');

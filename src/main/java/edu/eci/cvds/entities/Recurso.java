@@ -3,6 +3,7 @@ package edu.eci.cvds.entities;
 
 import java.io.Serializable;
 import java.sql.Time;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -14,14 +15,15 @@ public class Recurso implements Serializable {
     private String nombre;
     private String ubicacion;
     private int capacidad;
-    private Date fecha;
+    private LocalDate fecha;
     private Time horario_inicial;
     private Time horario_final;
+    private String disponibilidad;
     private String tiporecurso;
 
-    public Recurso(){}
+    public Recurso(){super();}
 
-    public Recurso(int id, String nombre, String ubicacion, int capacidad, Date fecha, Time horario_inicial, Time horario_final,String tiporecurso){
+    public Recurso(int id, String nombre, String ubicacion, int capacidad, LocalDate fecha, Time horario_inicial, Time horario_final,String disponibilidad,String tiporecurso){
         this.id = id;
         this.nombre = nombre;
         this.ubicacion = ubicacion;
@@ -29,13 +31,15 @@ public class Recurso implements Serializable {
         this.fecha = fecha;
         this.horario_inicial=horario_inicial;
         this.horario_final=horario_final;
+        this.disponibilidad=disponibilidad;
         this.tiporecurso=tiporecurso;
 
     }
 
+
     @Override
     public String toString() {
-        return "Recurso{" + " id= " + id + " nombre= " + nombre + " ubicacion= " + ubicacion + " capacidad= "+ capacidad +  " fecha = " + fecha + " Hora_inicial= " + horario_inicial + " Hora_final= " + horario_final + " tipo= " + tiporecurso + "}";
+        return "Recurso{" + " id= " + id + " nombre= " + nombre + " ubicacion= " + ubicacion + " capacidad= "+ capacidad +  " fecha = " + fecha + " Hora_inicial= " + horario_inicial + " Hora_final= " + horario_final + " disponibilidad= " + disponibilidad + " tipo= " + tiporecurso + "}";
     }
 
     public String getNombre(){
@@ -54,7 +58,7 @@ public class Recurso implements Serializable {
         this.capacidad = capacidad;
     }
 
-    public Date getFecha(){
+    public LocalDate getFecha(){
         return fecha;
     }
 
@@ -74,7 +78,7 @@ public class Recurso implements Serializable {
         this.ubicacion = ubicacion;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
@@ -100,5 +104,13 @@ public class Recurso implements Serializable {
 
     public void setTiporecurso(String tiporecurso) {
         this.tiporecurso = tiporecurso;
+    }
+
+    public String getDisponibilidad() {
+        return disponibilidad;
+    }
+
+    public void setDisponibilidad(String disponibilidad) {
+        this.disponibilidad = disponibilidad;
     }
 }

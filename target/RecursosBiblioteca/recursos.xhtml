@@ -48,6 +48,10 @@
                 <h:outputText value="#{recursos.ubicacion}" />
             </p:column>
 
+            <p:column headerText="Disponibilidad">
+                <h:outputText value="#{recursos.disponibilidad}" />
+            </p:column>
+
             <p:column headerText="Capacidad" sortBy ="#{recursos.capacidad}" filterBy="#{recursos.capacidad}" filterMatchMode = "contains">
                 <h:outputText value="#{recursos.capacidad}" />
             </p:column>
