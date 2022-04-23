@@ -9,6 +9,8 @@ import edu.eci.cvds.services.ECILibraryServices;
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.mybatis.guice.transactional.Transactional;
 
+import java.sql.Time;
+import java.time.LocalDate;
 import java.util.List;
 
 @Singleton
@@ -25,4 +27,15 @@ public class ECILibraryServicesImpl implements ECILibraryServices {
             throw new BibliotecaException("Error al consultar recursos",ex);
         }
     }
+
+
+    @Override
+    public void registrarRecursos(Recurso recurso) throws BibliotecaException {
+        try{
+            RecursoDAO.agregarRecursos(recurso);
+        }catch (PersistenceException ex){
+            throw  new BibliotecaException("Error al registrar recursos",ex);
+        }
+    }
+
 }

@@ -56,20 +56,16 @@
                 <div class="fondo" style = "display: flex; justyfy-content:center; align-items: center;" >
                     <img src = "./Images/fondo1.jpg" width="300" height="200" />
                 </div>
-                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center; ">
-                    <p:outputLabel for = "txtUsuario" value = "Usuario"/>
-                </div>
                 <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
+                    <h:outputText value="User" />
                     <p:inputText id = "txtUsuario" required = "true"/>
                 </div>
                 <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
-                    <p:outputLabel for = "txtClave" value = "Clave" />
+                    <h:outputText value="Password" />
+                    <p:password id="password" toggleMask="true" redisplay="true"/>
                 </div>
                 <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
-                    <p:inputText id = "txtClave" required = "true" />
-                </div>
-                <div class = "panel" style = "display: flex; justyfy-content:center; align-items: center;">
-                    <p:commandButton class = "btn btn-black" value = "Iniciar Sesion"/>
+                    <p:commandButton class = "btn btn-black" value = "Iniciar Sesion" actionListener="#{loginBean.inicia(txtUsuario.value,password.value,rememberMe)}"/>
                 </div>
             </div>
         </h:form>

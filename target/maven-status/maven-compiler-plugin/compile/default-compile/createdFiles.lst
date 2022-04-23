@@ -1,4 +1,5 @@
 edu\eci\cvds\entities\Recurso.class
+edu\eci\cvds\Seguridad\loginBean.class
 edu\eci\cvds\persistence\mappers\UserMapper.class
 edu\eci\cvds\persistence\mybatisimpl\MyBatisUserDAO.class
 edu\eci\cvds\services\impl\ECILibraryServicesImpl.class
@@ -6,16 +7,16 @@ edu\eci\cvds\guice\GuiceContextListener$1.class
 edu\eci\cvds\entities\User.class
 edu\eci\cvds\services\ECILibraryServicesFactory$1.class
 edu\eci\cvds\persistence\UserDAO.class
+edu\eci\cvds\Seguridad\noautenticado.class
 edu\eci\cvds\view\RecursoBean.class
 edu\eci\cvds\guice\GuiceContextListener.class
 edu\eci\cvds\view\BasePageBean.class
 edu\eci\cvds\Exceptions\PersistenceException.class
 edu\eci\cvds\Exceptions\BibliotecaException.class
+edu\eci\cvds\Seguridad\loginBeanImpl.class
 edu\eci\cvds\services\ECILibraryServices.class
 edu\eci\cvds\persistence\mappers\RecursoMapper.class
 edu\eci\cvds\persistence\RecursoDAO.class
 edu\eci\cvds\services\ECILibraryServicesFactory.class
 edu\eci\cvds\persistence\mybatisimpl\MyBatisRecursoDAO.class
-edu\eci\cvds\Seguridad\Authentication.class
 edu\eci\cvds\services\main.class
-edu\eci\cvds\Seguridad\login.class

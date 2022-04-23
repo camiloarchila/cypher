@@ -6,6 +6,8 @@ import edu.eci.cvds.persistence.RecursoDAO;
 import edu.eci.cvds.persistence.mappers.RecursoMapper;
 import org.apache.ibatis.exceptions.PersistenceException;
 
+import java.sql.Time;
+import java.time.LocalDate;
 import java.util.List;
 
 public class MyBatisRecursoDAO implements RecursoDAO {
@@ -23,4 +25,14 @@ public class MyBatisRecursoDAO implements RecursoDAO {
         }
         return lisrecursos;
     }
+
+    @Override
+    public void agregarRecursos(Recurso recurso) throws PersistenceException {
+        try{
+            recursoMapper.agregarRecursos(recurso);
+        }catch (org.apache.ibatis.exceptions.PersistenceException e){
+            throw new PersistenceException("Error al registrar recurso",e);
+        }
+    }
+
 }
